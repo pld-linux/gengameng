@@ -2,13 +2,14 @@ Summary:	A Generic Game Engine library for 2D double-buffering animation
 Summary(pl):	Biblioteka ogólnego silnika gier z podwójnie buforowan± animacj± 2D
 Name:		gengameng
 Version:	4.1
-Release:	3
+Release:	4
 License:	GPL
 Group:		X11/Libraries
 Source0:	http://www3.sympatico.ca/sarrazip/dev/%{name}-%{version}.tar.gz
 # Source0-md5:	112322dbdc6684717cdfd7c61d225655
 Patch0:		%{name}-config.patch
 Patch1:		%{name}-link.patch
+Patch2:		%{name}-acfix.patch
 URL:		http://sarrazip.com/dev/burgerspace.html
 BuildRequires:	SDL-devel >= 1.2.0
 BuildRequires:	SDL_image-devel >= 1.2.0
@@ -31,7 +32,7 @@ Cosmosmash.
 Summary:	C++ header files for the gengameng library
 Summary(pl):	Pliki nag³ówkowe C++ dla biblioteki gengameng
 Group:		X11/Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	SDL-devel >= 1.2.0
 Requires:	SDL_image-devel >= 1.2.0
 Requires:	libstdc++-devel
@@ -48,7 +49,7 @@ Pliki nag³ówkowe C++ dla biblioteki ogólnego silnika gier
 Summary:	Static gengameng library
 Summary(pl):	Statyczna biblioteka gengameng
 Group:		X11/Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static gengameng library.
@@ -60,6 +61,7 @@ Statyczna biblioteka gengameng.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 # supplied libtool is broken (C++)
