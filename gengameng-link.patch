@@ -1,0 +1,11 @@
+--- gengameng-4.1/src/gengameng/Makefile.am.orig	Fri Dec 28 18:11:03 2001
++++ gengameng-4.1/src/gengameng/Makefile.am	Wed Oct 15 14:49:55 2003
+@@ -27,7 +27,7 @@
+ 	Gengameng_LoadCompiledXPM.cpp \
+ 	Gengameng_LoadCompiledXPM.h
+ libgengameng_la_LIBADD = \
+-	@SDL_LIBS@
++	@SDL_LIBS@ -lSDL_image
+ 
+ pkginclude_HEADERS = \
+ 	Couple.h \
