@@ -8,13 +8,17 @@ Group:		X11/Libraries
 Source0:	http://www3.sympatico.ca/sarrazip/dev/%{name}-%{version}.tar.gz
 # Source0-md5:	112322dbdc6684717cdfd7c61d225655
 Patch0:		%{name}-config.patch
+Patch1:		%{name}-link.patch
 URL:		http://sarrazip.com/dev/burgerspace.html
-BuildRequires:	SDL_image-devel
+BuildRequires:	SDL-devel >= 1.2.0
+BuildRequires:	SDL_image-devel >= 1.2.0
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	libstdc++-devel
+BuildRequires:	libtool >= 2:1.4d
 Requires:	SDL >= 1.2.0
 Requires:	SDL_image >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 Generic Game Engine library suitable for BurgerSpace and Cosmosmash.
@@ -28,6 +32,9 @@ Summary:	C++ header files for the gengameng library
 Summary(pl):	Pliki nag³ówkowe C++ dla biblioteki gengameng
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}
+Requires:	SDL-devel >= 1.2.0
+Requires:	SDL_image-devel >= 1.2.0
+Requires:	libstdc++-devel
 
 %description devel
 C++ header files for the Generic Game Engine ("gengameng") library
@@ -52,8 +59,14 @@ Statyczna biblioteka gengameng.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
+# supplied libtool is broken (C++)
+%{__libtoolize}
+%{__aclocal} -I macros
+%{__autoconf}
+%{__automake}
 %configure \
 	--enable-static
 
@@ -74,6 +87,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc AUTHORS NEWS README
 %attr(755,root,root) %{_libdir}/libgengameng.so.*.*
 
 %files devel
