@@ -2,7 +2,7 @@ Summary:	A Generic Game Engine library for 2D double-buffering animation
 Summary(pl):	Biblioteka ogólnego silnika gier z podwójnie buforowan± animacj± 2D
 Name:		gengameng
 Version:	4.1
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Libraries
 Source0:	http://www3.sympatico.ca/sarrazip/dev/%{name}-%{version}.tar.gz
@@ -41,7 +41,7 @@ Pliki nag³ówkowe C++ dla biblioteki ogólnego silnika gier
 Summary: 	Static gengameng library
 Summary(pl):	Statyczna biblioteka gengameng
 Group: 		X11/Development/Libraries
-Requires:	%{name}-devel = %version}
+Requires:	%{name}-devel = %{version}
 
 %description static
 Static gengameng library.
