@@ -6,6 +6,7 @@ Release:	3
 License:	GPL
 Group:		X11/Libraries
 Source0:	http://www3.sympatico.ca/sarrazip/dev/%{name}-%{version}.tar.gz
+# Source0-md5:	112322dbdc6684717cdfd7c61d225655
 Patch0:		%{name}-config.patch
 URL:		http://sarrazip.com/dev/burgerspace.html
 BuildRequires:	SDL_image-devel
