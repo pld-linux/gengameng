@@ -24,9 +24,9 @@ Biblioteka ogólnego silnika gier wykorzystana w grach BurgerSpace i
 Cosmosmash.
 
 %package devel
-Summary: 	C++ header files for the gengameng library
+Summary:	C++ header files for the gengameng library
 Summary(pl):	Pliki nag³ówkowe C++ dla biblioteki gengameng
-Group: 		X11/Development/Libraries
+Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}
 
 %description devel
@@ -38,9 +38,9 @@ Pliki nag³ówkowe C++ dla biblioteki ogólnego silnika gier
 ("gengameng") z podwójnie buforowan± animacj± 2D.
 
 %package static
-Summary: 	Static gengameng library
+Summary:	Static gengameng library
 Summary(pl):	Statyczna biblioteka gengameng
-Group: 		X11/Development/Libraries
+Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}
 
 %description static
