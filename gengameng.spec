@@ -80,7 +80,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/gengameng-config
 %attr(755,root,root) %{_libdir}/libgengameng.so
-%attr(755,root,root) %{_libdir}/libgengameng.la
+%{_libdir}/libgengameng.la
 %{_includedir}/gengameng
 %{_aclocaldir}/gengameng.m4
 
