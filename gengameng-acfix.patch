@@ -1,0 +1,29 @@
+--- gengameng-4.1/configure.in.orig	2002-03-31 23:57:19.000000000 +0200
++++ gengameng-4.1/configure.in	2004-03-28 22:42:36.651976416 +0200
+@@ -1,7 +1,7 @@
+ # $Id$
+ # configure.in for the gengameng library
+ 
+-AC_INIT(src/gengameng/GameEngine.h)
++AC_INIT(gengameng, [1.1], [])
+ 
+ INTERFACE_NO=4
+ RELEASE_NO=1
+@@ -21,7 +21,7 @@
+ # AC_ARG_PROGRAM was called before AC_CANONICAL_TARGET
+ # @sarrazip 20020330
+ 
+-AM_INIT_AUTOMAKE(gengameng, $INTERFACE_NO.$RELEASE_NO)
++AM_INIT_AUTOMAKE
+ 
+ # Checks for programs.
+ AC_PROG_CXX
+@@ -77,7 +77,7 @@
+ AC_SUBST(GENGAMENG_LIBS)
+ 
+ 
+-pkgincludedir=$includedir/$package
++pkgincludedir=$includedir/$PACKAGE_NAME
+ AC_SUBST(pkgincludedir)
+ 
+ 
