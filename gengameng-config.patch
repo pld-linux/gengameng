@@ -1,0 +1,12 @@
+diff -Nur gengameng-4.1.org/gengameng-config.in gengameng-4.1/gengameng-config.in
+--- gengameng-4.1.org/gengameng-config.in	Wed Apr  3 07:42:10 2002
++++ gengameng-4.1/gengameng-config.in	Mon Sep  9 19:21:51 2002
+@@ -15,7 +15,7 @@
+ sdl_libs=`echo $sdl_libs | sed 's:-Wl,-rpath,[^ ]*: :g'`
+ 
+ 
+-function usage()
++usage()
+ {
+ 	exit_code=$1
+ 
