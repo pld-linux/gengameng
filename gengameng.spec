@@ -14,7 +14,6 @@ Requires:	SDL >= 1.2.0
 Requires:	SDL_image >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix	/usr/X11R6
 
 %description
 Generic Game Engine library suitable for BurgerSpace and Cosmosmash.
