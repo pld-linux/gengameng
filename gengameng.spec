@@ -1,5 +1,5 @@
 Summary:	A Generic Game Engine library for 2D double-buffering animation
-Summary(pl.UTF-8):   Biblioteka ogólnego silnika gier z podwójnie buforowaną animacją 2D
+Summary(pl.UTF-8):	Biblioteka ogólnego silnika gier z podwójnie buforowaną animacją 2D
 Name:		gengameng
 Version:	4.1
 Release:	4
@@ -30,7 +30,7 @@ Cosmosmash.
 
 %package devel
 Summary:	C++ header files for the gengameng library
-Summary(pl.UTF-8):   Pliki nagłówkowe C++ dla biblioteki gengameng
+Summary(pl.UTF-8):	Pliki nagłówkowe C++ dla biblioteki gengameng
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	SDL-devel >= 1.2.0
@@ -47,7 +47,7 @@ Pliki nagłówkowe C++ dla biblioteki ogólnego silnika gier
 
 %package static
 Summary:	Static gengameng library
-Summary(pl.UTF-8):   Statyczna biblioteka gengameng
+Summary(pl.UTF-8):	Statyczna biblioteka gengameng
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
