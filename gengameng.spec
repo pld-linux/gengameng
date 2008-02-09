@@ -15,7 +15,6 @@ BuildRequires:	SDL-devel >= 1.2.0
 BuildRequires:	SDL_image-devel >= 1.2.0
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libatomic_ops
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool >= 2:1.4d
 Requires:	SDL >= 1.2.0
